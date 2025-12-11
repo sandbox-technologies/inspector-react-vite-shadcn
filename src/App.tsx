@@ -1,26 +1,42 @@
-import CountBtn from "@/components/count-btn";
-import ReactSVG from "@/assets/react.svg";
-import { Badge } from "@/components/ui/badge";
+import { Moon, Sun } from "lucide-react";
+import { useDarkMode } from "@/hooks/use-dark-mode";
+import InspectorLogo from "@/assets/inspector-logo.png";
 
 function App() {
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
+
   return (
-    <main className="flex flex-col items-center justify-center h-screen">
-      <div className="flex flex-col items-center gap-y-4">
-        <div className="inline-flex items-center gap-x-4">
-          <img src={ReactSVG} alt="React Logo" className="w-32" />
-          <span className="text-6xl">+</span>
-          <img src={"/vite.svg"} alt="Vite Logo" className="w-32" />
+    <div className="min-h-screen bg-background text-foreground flex items-center justify-center px-6">
+      {/* Theme Toggle */}
+      <button
+        onClick={toggleDarkMode}
+        className="fixed top-4 right-4 p-2 rounded-lg hover:bg-muted transition-colors"
+        aria-label="Toggle theme"
+      >
+        {isDarkMode ? (
+          <Sun className="w-5 h-5" />
+        ) : (
+          <Moon className="w-5 h-5" />
+        )}
+      </button>
+
+      {/* Centered Content */}
+      <div className="text-center space-y-4">
+        <div className="flex items-center justify-center gap-3">
+          <img 
+            src={InspectorLogo} 
+            alt="Inspector" 
+            className="w-14 h-14"
+          />
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+            Inspector Template
+          </h1>
         </div>
-        <a
-          href="https://ui.shadcn.com"
-          rel="noopener noreferrer nofollow"
-          target="_blank"
-        >
-          <Badge variant="outline">shadcn/ui</Badge>
-        </a>
-        <CountBtn />
+        <p className="text-lg text-muted-foreground">
+          Start building with React, Vite, Tailwind, and shadcn/ui.
+        </p>
       </div>
-    </main>
+    </div>
   );
 }
 

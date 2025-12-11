@@ -1,89 +1,89 @@
-# React + Vite + TypeScript Template (react-vite-ui)
+# Inspector React + Vite + shadcn/ui Template
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Dan5py/react-vite-ui/blob/main/LICENSE)
+A modern React + Vite template styled with the Inspector design language and powered by shadcn/ui.
 
-A React + Vite template powered by shadcn/ui.
+## 🛠️ Tech Stack
 
-> [!NOTE]
-> This template uses Tailwind v3, if you want to use Tailwind v4, check the [tw4 branch](https://github.com/dan5py/react-vite-shadcn-ui/tree/tw4).
+- **React 19** - A JavaScript library for building user interfaces
+- **Vite** - A fast, opinionated frontend build tool
+- **TypeScript** - Typed superset of JavaScript
+- **Tailwind CSS v3** - Utility-first CSS framework
+- **shadcn/ui** - Beautifully designed components
+- **Radix UI** - Accessible component primitives
+- **Lucide Icons** - Beautiful, consistent icon set
 
-## 🎉 Features
+## 🎨 Features
 
-- **React** - A JavaScript library for building user interfaces.
-- **Vite** - A fast, opinionated frontend build tool.
-- **TypeScript** - A typed superset of JavaScript that compiles to plain JavaScript.
-- **Tailwind CSS** - A utility-first CSS framework. (`v3`)
-- **Tailwind Prettier Plugin** - A Prettier plugin for formatting Tailwind CSS classes.
-- **ESLint** - A pluggable linting utility for JavaScript and TypeScript.
-- **PostCSS** - A tool for transforming CSS with JavaScript.
-- **Autoprefixer** - A PostCSS plugin to parse CSS and add vendor prefixes.
-- **shadcn/ui** - Beautifully designed components that you can copy and paste into your apps.
+- **Dark/Light Mode** - Built-in theme toggle with localStorage persistence
+- **Inspector Styling** - Matches the Inspector app design language
+- **Ready to Build** - Start adding your own components immediately
 
 ## ⚙️ Prerequisites
 
-Make sure you have the following installed on your development machine:
-
 - Node.js (version 22 or above)
-- pnpm (package manager)
+- pnpm (recommended) or npm
 
 ## 🚀 Getting Started
 
-Follow these steps to get started with the react-vite-ui template:
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/dan5py/react-vite-ui.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```bash
-   cd react-vite-ui
-   ```
-
-3. Install the dependencies:
+1. Install dependencies:
 
    ```bash
    pnpm install
    ```
 
-4. Start the development server:
+2. Start the development server:
 
    ```bash
    pnpm dev
    ```
 
+3. Open [http://localhost:5173](http://localhost:5173) in your browser.
+
 ## 📜 Available Scripts
 
-- pnpm dev - Starts the development server.
-- pnpm build - Builds the production-ready code.
-- pnpm lint - Runs ESLint to analyze and lint the code.
-- pnpm preview - Starts the Vite development server in preview mode.
+| Command | Description |
+|---------|-------------|
+| `pnpm dev` | Start development server |
+| `pnpm build` | Build for production |
+| `pnpm preview` | Preview production build |
+| `pnpm lint` | Run ESLint |
 
 ## 📂 Project Structure
 
-The project structure follows a standard React application layout:
-
-```python
-react-vite-ui/
-  ├── node_modules/      # Project dependencies
-  ├── public/            # Public assets
-  ├── src/               # Application source code
-  │   ├── components/    # React components
-  │   │   └── ui/        # shadc/ui components
-  │   ├── styles/        # CSS stylesheets
-  │   ├── lib/           # Utility functions
-  │   ├── App.tsx        # Application entry point
-  │   └── index.tsx      # Main rendering file
-  ├── eslint.config.js     # ESLint configuration
-  ├── index.html         # HTML entry point
-  ├── postcss.config.js  # PostCSS configuration
-  ├── tailwind.config.ts # Tailwind CSS configuration
-  ├── tsconfig.json      # TypeScript configuration
-  └── vite.config.ts     # Vite configuration
 ```
+inspector-react-vite-shadcn-ui/
+├── public/
+│   └── favicon.png
+├── src/
+│   ├── assets/
+│   │   └── inspector-logo.png
+│   ├── components/
+│   │   └── ui/           # shadcn/ui components
+│   ├── hooks/
+│   │   └── use-dark-mode.ts
+│   ├── lib/
+│   │   └── utils.ts
+│   ├── styles/
+│   │   └── globals.css
+│   ├── App.tsx
+│   └── main.tsx
+├── tailwind.config.ts
+└── vite.config.ts
+```
+
+## ➕ Adding Components
+
+Use the shadcn/ui CLI to add more components:
+
+```bash
+npx shadcn@latest add button
+npx shadcn@latest add card
+npx shadcn@latest add input
+# etc.
+```
+
+Browse all available components at [ui.shadcn.com](https://ui.shadcn.com/docs/components).
 
 ## 📄 License
 
-This project is licensed under the MIT License. See the [LICENSE](https://choosealicense.com/licenses/mit/) file for details.
+MIT License - see [LICENSE](LICENSE) for details.

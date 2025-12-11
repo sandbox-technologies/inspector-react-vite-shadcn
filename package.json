@@ -1,8 +1,20 @@
 {
-  "name": "react-vite-ui",
-  "private": true,
-  "version": "0.0.0",
+  "name": "inspector-react-vite-shadcn-ui",
+  "version": "1.0.0",
+  "description": "A modern React + Vite template styled with the Inspector design language and powered by shadcn/ui",
   "type": "module",
+  "author": "Inspector <founders@tryinspector.com>",
+  "license": "MIT",
+  "homepage": "https://tryinspector.com",
+  "keywords": [
+    "react",
+    "vite",
+    "typescript",
+    "tailwindcss",
+    "shadcn-ui",
+    "template",
+    "inspector"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
