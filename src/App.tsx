@@ -29,10 +29,10 @@ function App() {
             className="w-14 h-14"
           />
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-            Inspector Template
+            Inspector Vite Template
           </h1>
         </div>
-        <p className="text-lg text-muted-foreground">
+        <p className="text-lg text-muted-foreground w-full">
           Start building with React, Vite, Tailwind, and shadcn/ui.
         </p>
       </div>
